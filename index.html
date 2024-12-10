@@ -1,34 +1,75 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My resume</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1 style="text-align: center;">Я легенда</h1>
-    <img src="./poster.jpg" alt="my avatar">
-    <h2>Інформація про фільм</h2>
-    <ol>
-        <h3><strong>Головні герої</strong></h3>
-        <li>Вілл Сміт</li>
-        <li>Алісе Брага</li>
-        <li>Чарлі Тахан</li>
-    </ol>
-    <ul>
-        <h3><em>Жанр</em></h3>
-        <li>пост-апокаліптичний фільм жахів</li>
-        <h3><em>Рік</em></h3>
-        <li>2007</li>
-    </ul>
+  <div class="wrapper">
+    <section class="head-title">
+      <span class="login">Login</span> <span class="straight-line">|</span> <span class="register">Register</span>
+      <button class="close-button"><img src="./close-btn.png" alt="close-btn"></button>
+    </section>
 
-    <label>
-        Напишіть своє враження від фільму:
-        <input type="text">
-    </label>
-    <button>send</button>
+    <section class="register-form-container">
+      <div class="form-text">
+        Enter your email and password to register.
+      </div>
+      <div class="inputs">
+        <input type="text" placeholder="Username" class="register-inputs userName-input">
+
+        <input type="text" placeholder="Enter your email address" class="register-inputs email-input">
+
+        <div class="password-container">
+          <input type="text" id="password" placeholder="Password" class="register-input">
+          <button type="button" class="toggle-password">
+            <img src="./Hide.png" alt="Hide Password">
+          </button>
+        </div>
+
+        <input type="text" placeholder="Confirm Password" class="register-inputs confirmPassword-input">
+      </div>
+
+      <div>
+        <button class="register-button">Register</button>
+      </div>
+
+      <div class="divider">
+        <div class="line-before"></div>
+        <span>Or register with</span>
+        <div class="line-after"></div>
+      </div>
+
+
+      <div class="btn-option-registration">
+
+        <button class="btn-google btn">
+
+          <img src="./google.png" alt="Google">
+
+          <span class="btn-text">Continue with Google</span>
+
+        </button>
+        <!--  -->
+        <button class="btn-facebook btn">
+
+          <img src="./facebook 1.png" alt="Facebook">
+
+          <span class="btn-text">Continue with Facebook</span>
+
+        </button>
+
+      </div>
+
+
+    </section>
+
+    <div class="bottom-line"></div>
+  </div>
 </body>
 
 </html>
