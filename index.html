@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My resume</title>
+  <title>Register Page</title>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-  <h1 style="text-align: center;">Я легенда</h1>
-  <img src="./poster.jpg" alt="my avatar">
-  <h2>Інформація про фільм</h2>
-  <p>Головні герої</p>
-  <ol>
-    <li>Вілл Сміт</li>
-    <li>Алісе Брага</li>
-    <li>Чарлі Тахан</li>
-  </ol>
-  <p>Жанр</p>
-  <ul>
-    <li>пост-апокаліптичний фільм жахів</li>
-  </ul>
-  <p>Рік</p>
-  <ul>
-    <li>2007</li>
-  </ul>
-
-  <label>
-    Напишіть своє враження від фільму:
-    <input type="text">
-  </label>
-  <button>send</button>
+  <div class="wrapper">
+    <div>
+      <h1>Login | <span class="register">Register</span></h1>
+    </div>
+    <p>Enter your email and password to register.</p>
+    <form>
+      <input type="text" class="input" placeholder="Username" required>
+      <input type="email" class="input" placeholder="Enter your email address" required>
+      <div>
+        <input type="password" class="input" placeholder="Password" required>
+        <button type="button">👁</button>
+      </div>
+      <input type="password" class="input" placeholder="Confirm Password" required>
+      <br>
+      <button type="submit" class="button-register">Register</button>
+    </form>
+    <p>Or register with</p>
+    <div>
+      <button> <img src="./img/google.png" alt="">Continue with Google</button>
+      <button> <img src="./img/facebook.png" alt="">Continue with Facebook</button>
+    </div>
+  </div>
 </body>
 
 </html>
