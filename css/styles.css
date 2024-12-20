@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Cera Pro Regular";
+  src: url(../fonts/CeraPro-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Cera Pro Medium";
+  src: url(../fonts/CeraPro-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Cera Pro Bold";
+  src: url(../fonts/CeraPro-Bold.woff) format("woff");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -36,6 +51,8 @@ header {
   font-weight: 400;
   font-size: 16px;
   color: #3d3d3d;
+  font-family: "Cera Pro Regular";
+  border-bottom: 3px solid transparent;
 }
 
 #active {
@@ -66,6 +83,11 @@ header {
 
 .btn span {
   color: #fff;
+  font-family: "Cera Pro Medium";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 /* ///////////////////// */
@@ -93,15 +115,18 @@ section {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #3d3d3d;
+  font-family: "Cera Pro Medium";
 }
 
 h1 {
-  font-weight: 900;
+  font-family: "Cera Pro Bold";
+  color: #3D3D3D;
   font-size: 70px;
-  line-height: 100%;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 70px;
   text-transform: uppercase;
-  color: #3d3d3d;
-  margin-bottom: 5px;
+
 }
 
 h1 span {
@@ -109,18 +134,22 @@ h1 span {
 }
 
 .description {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 171%;
   color: #727272;
-  max-width: 520px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
   margin-bottom: 44px;
+  font-family: "Cera Pro Regular";
 }
 
 .button {
   width: 140px;
   height: 40px;
   color: #fff;
+  font-family: "Cera Pro Medium";
+  font-style: normal;
+  text-transform: uppercase;
 }
 
 .rightSide {
