@@ -304,16 +304,12 @@ h1 span {
   background: #fff;
 }
 
-.card {
-  cursor: pointer;
-  background: #fbfbfb;
-}
-
-.card img {
+.productsCard img {
   background-color: #FBFBFB;
   width: 258px;
   height: 300px;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .cardName {
@@ -334,15 +330,15 @@ h1 span {
 }
 
 .pagination-container {
-  margin: 50px 0 80px 0;
+  margin: 50px 0 94px 0;
   display: flex;
+  gap: 10px;
   justify-content: flex-end;
   width: 100%;
 }
 
 .pagination {
   display: flex;
-  gap: 10px;
   align-items: center;
 }
 
@@ -369,4 +365,164 @@ h1 span {
 .page.arrow img {
   width: 18px;
   height: 18px;
+}
+
+/* ////////////// */
+/* PROMO-CARD */
+/* ////////////// */
+
+.plantPromoSection {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  margin-bottom: 140px;
+}
+
+.promoCard {
+  width: 586px;
+  height: 250px;
+  display: flex;
+
+  position: relative;
+  background: #FBFBFB;
+}
+
+.promoCard>img {
+  width: 292px;
+  height: 292px;
+  position: absolute;
+  top: -50px;
+}
+
+.plantPromoCentered {
+  padding: 37px 30px 46px 264px;
+}
+
+.plantCardTitle {
+  color: #000;
+  text-align: right;
+  font-family: "Cera Pro Bold";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.plantCardDescription {
+  color: #3D3D3D;
+  text-align: right;
+  font-family: "Cera Pro Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.plantCardButton {
+  width: 140px;
+  height: 40px;
+  border-radius: 6px;
+  background: #46A358;
+  margin-top: 30px;
+  margin-left: 150px;
+  cursor: pointer;
+}
+
+.plantCardButton>p {
+  font-family: "Cera Pro Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: #fff;
+}
+
+/* ////////////// */
+/* BLOG */
+/* ////////////// */
+
+.blogTitle {
+  text-align: center;
+}
+
+.blogName {
+  color: #000;
+  text-align: center;
+  font-family: "Cera Pro Bold";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  margin-bottom: 15px;
+}
+
+.blogDescription {
+  color: #3D3D3D;
+  text-align: center;
+  font-family: "Cera Pro Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 35px;
+}
+
+/* BLOG CARDs */
+
+.blogCards {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.blogCard {
+  max-width: 268px;
+  background: #FBFBFB;
+}
+
+.blogCardText {
+  padding: 9px 25px 13px 15px;
+}
+
+.blogSubText {
+  color: #46A358;
+  font-family: "Cera Pro Medium";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.blogCardTitle {
+  margin-top: 4px;
+  color: #000;
+  font-family: "Cera Pro Bold";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.blogCardDescription {
+  color: #727272;
+  font-family: "Cera Pro Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: 4px;
+}
+
+.blogCardReadMore {
+  color: #000;
+  font-family: "Cera Pro Medium";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  margin-top: 9px;
+  cursor: pointer;
 }
