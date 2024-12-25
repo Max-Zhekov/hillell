@@ -184,6 +184,10 @@ h1 span {
   padding-left: 18px;
 }
 
+.asideDescription>ul {
+  padding-left: 30px;
+}
+
 .asideDescription>ul>li {
   color: #3D3D3D;
   font-family: "Cera Pro Medium";
@@ -191,7 +195,6 @@ h1 span {
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
-  padding-left: 30px;
   cursor: pointer;
 }
 
@@ -294,8 +297,8 @@ h1 span {
 }
 
 .products {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   column-gap: 30px;
   row-gap: 70px;
   width: 100%;
@@ -326,6 +329,8 @@ h1 span {
   font-style: normal;
   font-weight: 700;
   line-height: 16px;
+  margin-top: 6px;
+  font-family: "Cera Pro Medium";
   /* 88.889% */
 }
 
@@ -453,7 +458,7 @@ h1 span {
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 30px;
   margin-bottom: 15px;
 }
 
