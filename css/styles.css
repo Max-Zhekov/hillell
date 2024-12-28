@@ -240,10 +240,9 @@ h1 span {
 
 .contentHeader {
   width: 840px;
-  /* width: 100%; */
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 38px;
 }
 
 .filter {
@@ -296,42 +295,96 @@ h1 span {
   line-height: 16px;
 }
 
-.products {
+.goods {
+  width: 840px;
+  margin-top: 38px;
+  margin-bottom: 100px;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 30px;
+  column-gap: 32px;
   row-gap: 70px;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  background: #fff;
 }
 
-.productsCard img {
-  background-color: #FBFBFB;
+.goodsPhoto {
   width: 258px;
   height: 300px;
-  margin: 0 auto;
-  cursor: pointer;
+  padding: 31px 4px 19px 4px;
+  background-color: #FBFBFB;
 }
 
-.cardName {
+.angelWingBegonia {
+  border-top: 1px solid #46A358;
+  position: relative;
+}
+
+.frame {
+  display: flex;
+  gap: 14px;
+  position: absolute;
+  top: 265px;
+  left: 80px;
+}
+
+.africanViolet {
+  position: relative;
+}
+
+.discount {
+  background-color: #46A358;
+  position: absolute;
+  width: 80px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 14px;
+  left: 0px;
+}
+
+.discountPrice {
+  text-transform: uppercase;
+  color: #FFF;
+  font-family: "Cera Pro Medium";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 7px 8px 6px 9px;
+}
+
+.exPrise::after {
+  content: "$229.00";
+  text-decoration: line-through;
+  color: #A5A5A5;
+  font-family: "Cera Pro Medium";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  margin-left: 16px;
+}
+
+.goodsInfo {
+  margin-top: 12px;
+}
+
+.flowerName {
+  color: #3D3D3D;
+  font-family: "Cera Pro Regular";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
-  /* 100% */
 }
 
-.value {
+.flowerPrise {
   color: #46A358;
+  margin-top: 6px;
+  font-family: "Cera Pro Bold";
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 16px;
-  margin-top: 6px;
-  font-family: "Cera Pro Medium";
-  /* 88.889% */
 }
 
 .pagination-container {
