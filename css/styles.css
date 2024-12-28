@@ -313,16 +313,46 @@ h1 span {
 }
 
 .angelWingBegonia {
-  border-top: 1px solid #46A358;
   position: relative;
+  overflow: hidden;
+  border-top: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.angelWingBegonia:hover {
+  border-top-color: #46A358;
 }
 
 .frame {
   display: flex;
   gap: 14px;
   position: absolute;
-  top: 265px;
+  top: 80%;
   left: 80px;
+  opacity: 0;
+  transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+.angelWingBegonia:hover .frame {
+  top: 265px;
+  opacity: 1;
+}
+
+.angelWingBegonia:hover .goodsPhoto img {
+  transition: transform 0.3s ease;
+}
+
+.frameElement img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.frameElement img:hover {
+  transform: scale(1.2);
 }
 
 .africanViolet {
