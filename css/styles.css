@@ -716,3 +716,214 @@ h1 span {
   margin-top: 9px;
   cursor: pointer;
 }
+
+/* SERVICES */
+
+.services {
+  width: 100%;
+  background: #FBFBFB;
+  padding: 24px 25px;
+  display: flex;
+}
+
+.servicesPart {
+  width: 734px;
+  display: flex;
+}
+
+.servicesItem {
+  position: relative;
+  width: 204px;
+  height: 204px;
+  margin-right: 61px;
+}
+
+.servicesItem::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 235px;
+  width: 1px;
+  background: rgba(70, 163, 88, 0.10);
+}
+
+.servicesItemName {
+  color: #3D3D3D;
+  font-family: "Cera Pro Medium";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 17px;
+  margin-bottom: 9px;
+}
+
+.servicesItemDescription p {
+  color: #727272;
+  font-family: "Cera Pro Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.newsLetter {
+  margin-left: 62px;
+  width: 354px;
+  height: 202px;
+}
+
+.newsLetterTitle {
+  margin-top: 13px;
+  margin-bottom: 25px;
+  color: #3D3D3D;
+  font-family: "Cera Pro Bold";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.newsLetterForm {
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.newsLetterInput {
+  flex: 1;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.newsLetterInput::placeholder {
+  color: #ACACAC;
+  font-family: "Cera Pro Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.newsletterButton {
+  padding: 12px 25px;
+  background-color: #46A358;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Cera Pro Bold";
+  cursor: pointer;
+}
+
+.newsLetterDescription p {
+  color: #727272;
+  font-family: "Cera Pro Regular";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+/* TOPBAR */
+
+.topBar {
+  width: 100%;
+  height: 88px;
+  background: linear-gradient(90deg, #EDF6EF 0%, #52C368 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 23px;
+}
+
+.address {
+  width: 206px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.email {
+  width: 206px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.phoneNumber {
+  width: 206px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+/* FOOTER INFO */
+
+.footerInfo {
+  padding: 33px 25px;
+  background: #FBFBFB;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(70, 163, 88, 0.20);
+  margin-bottom: 7px;
+}
+
+.footerInfoListTitle {
+  margin-bottom: 8px;
+  font-family: "Cera Pro Bold";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.footerInfoListElement {
+  font-family: "Cera Pro Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.socialMediaTitle {
+  font-family: "Cera Pro Bold";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+
+.socialMediaLinks {
+  display: flex;
+  gap: 10px;
+}
+
+.payment {
+  margin-top: 33px;
+}
+
+.paymentTitle {
+  margin-bottom: 13px;
+  font-family: "Cera Pro Bold";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.copyRight p {
+  font-family: "Cera Pro Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 22px;
+}
