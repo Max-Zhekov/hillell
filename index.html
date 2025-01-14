@@ -64,17 +64,18 @@
 
       </ul>
 
-      <button class="btn btnHeader">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17.1601 9.1006H7.12598" stroke="white" stroke-width="1.5" stroke-linecap="round"
-            stroke-linejoin="round" />
-          <path d="M14.7212 6.67059L17.1612 9.10059L14.7212 11.5306" stroke="white" stroke-width="1.5"
-            stroke-linecap="round" stroke-linejoin="round" />
-          <path
-            d="M12.6342 5.35826C12.3592 2.37493 11.2425 1.2916 6.80082 1.2916C0.883322 1.2916 0.883322 3.2166 0.883322 8.99993C0.883322 14.7833 0.883322 16.7083 6.80082 16.7083C11.2425 16.7083 12.3592 15.6249 12.6342 12.6416"
-            stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        <span>Login</span>
+      <button class="btn btnHeader"> <a href="./registration.html" class="login-link">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.1601 9.1006H7.12598" stroke="white" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M14.7212 6.67059L17.1612 9.10059L14.7212 11.5306" stroke="white" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M12.6342 5.35826C12.3592 2.37493 11.2425 1.2916 6.80082 1.2916C0.883322 1.2916 0.883322 3.2166 0.883322 8.99993C0.883322 14.7833 0.883322 16.7083 6.80082 16.7083C11.2425 16.7083 12.3592 15.6249 12.6342 12.6416"
+              stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span>Login</span>
+        </a>
       </button>
 
     </header>
@@ -100,7 +101,9 @@
 
 
       <div class="rightSide">
-        <img src="./img/01.png" alt="flowers">
+        <div class="rightSideImg">
+          <!-- <img src="./img/01.png" alt="flowers"> -->
+        </div>
       </div>
     </section>
 
@@ -109,22 +112,21 @@
         <aside class="shopAside">
           <div class="asideDescription">
             <h3>Categories</h3>
-            <ul>
+            <ul class="categories">
               <li id="asideActive">House Plants</li>
-              <li>Potter Plants</li>
-              <li>Seeds</li>
-              <li>Small Plants</li>
-              <li>Big Plants</li>
-              <li>Succulents</li>
-              <li>Trerrariums</li>
-              <li>Gardening</li>
-              <li>Accessories</li>
+              <li class="categories-item">Potter Plants</li>
+              <li class="categories-item">Seeds</li>
+              <li class="categories-item">Small Plants</li>
+              <li class="categories-item">Big Plants</li>
+              <li class="categories-item">Succulents</li>
+              <li class="categories-item">Trerrariums</li>
+              <li class="categories-item">Gardening</li>
+              <li class="categories-item">Accessories</li>
             </ul>
           </div>
           <div class="ad">
             <h3>up to 75% off</h3>
             <div class="adFlower">
-              <img src="./img/flower.png" alt="flower">
             </div>
           </div>
         </aside>
@@ -132,10 +134,10 @@
         <div class="content">
           <div class="contentHeader">
             <div class="filter">
-              <ul>
+              <ul class="sort">
                 <li id="activeFilter">All Plants</li>
-                <li>New Arrivals</li>
-                <li>Sale</li>
+                <li class="sort-item">New Arrivals</li>
+                <li class="sort-item">Sale</li>
               </ul>
             </div>
 
@@ -397,18 +399,18 @@
       <div class="pagination">
         <button class="page paginationActive">1
       </div>
-      <button class="page">2</button>
-      <button class="page">3</button>
-      <button class="page">4</button>
+      <button class="page pageNotActive">2</button>
+      <button class="page pageNotActive">3</button>
+      <button class="page pageNotActive">4</button>
       <button class="page arrow">
         <img src="./img/ArrowRight.svg" alt="Next">
       </button>
     </div>
 
-
     <section class="plantPromoSection">
-      <div class="promoCard">
-        <img src="./img/flower5.png" alt="Blushing Bromeliad">
+      <div class="promoCard ">
+        <div class="promoCardImg promoCardLeft">
+        </div>
         <div class="plantPromoCentered">
           <h3 class="plantCardTitle">Summer cactus <br> & succulents</h3>
           <p class="plantCardDescription">
@@ -423,7 +425,8 @@
       </div>
 
       <div class="promoCard">
-        <img src="./img/flower3.png" alt="Blushing Bromeliad">
+        <div class="promoCardImg promoCardRight">
+        </div>
         <div class="plantPromoCentered">
           <h3 class="plantCardTitle">Styling Trends <br>
             & much more</h3>
@@ -497,14 +500,11 @@
       </div>
     </section>
 
-
     <footer class="footer">
 
       <section class="services">
 
         <div class="servicesPart">
-
-
 
           <div class="servicesItem">
 
@@ -642,11 +642,11 @@
               <p>Social Media</p>
             </div>
             <div class="socialMediaLinks">
-              <a href="#" class="socialLink"><img src="./img/Facebook.png" alt="facebook link"></a>
-              <a href="#" class="socialLink"><img src="./img/Instagram.png" alt="instagram link"></a>
-              <a href="#" class="socialLink"><img src="./img/Twitter.png" alt="Twitter link"></a>
-              <a href="#" class="socialLink"><img src="./img/Linkidin.png" alt="Linkidin link"></a>
-              <a href="#" class="socialLink"><img src="./img/Youtube.png" alt="Youtube link"></a>
+              <a href="#" class="socialLink facebook"><img src="./img/Facebook.png" alt="Facebook link"></a>
+              <a href="#" class="socialLink instagram"><img src="./img/Instagram.png" alt="Instagram link"></a>
+              <a href="#" class="socialLink twitter"><img src="./img/Twitter.png" alt="Twitter link"></a>
+              <a href="#" class="socialLink linkidin"><img src="./img/Linkidin.png" alt="Linkidin link"></a>
+              <a href="#" class="socialLink youtube"><img src="./img/Youtube.png" alt="Youtube link"></a>
             </div>
 
           </div>
@@ -655,7 +655,9 @@
             <div class="paymentTitle">
               <p>We accept</p>
             </div>
-            <img src="./img/payment methods.png" alt="payment methods: PayPal, MasterCard, VISA, American Express">
+            <div class="paymentImg">
+              <img src="./img/payment methods.png" alt="">
+            </div>
           </div>
         </div>
       </section>

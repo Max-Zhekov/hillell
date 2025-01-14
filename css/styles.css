@@ -28,6 +28,177 @@
   box-sizing: border-box;
 }
 
+/* registration.html */
+
+.registration-wrapper {
+  width: 500px;
+  height: 656px;
+  box-shadow: 0px 5px 10px 5px #888;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  font-family: "Inter", sans-serif;
+}
+
+.head-title {
+  padding-top: 52px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.login {
+  font-size: 20px;
+  font-weight: 500;
+  padding-right: 12px;
+  cursor: pointer;
+}
+
+.straight-line {
+  font-size: 13px;
+  padding-top: 5px;
+  font-weight: 250;
+}
+
+.register {
+  font-size: 20px;
+  font-weight: 500;
+  color: #46a358;
+  padding-left: 12px;
+  cursor: pointer;
+}
+
+.close-button {
+  position: absolute;
+  top: 13px;
+  left: 469px;
+  color: #46a358;
+  border: none;
+  background-color: #fff;
+}
+
+.register-form-container {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.form-text {
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: #666;
+}
+
+.register-input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 5px;
+  width: 90%;
+  max-width: 300px;
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  background-color: #fff;
+  border: none;
+  top: 25px;
+  right: 40px;
+  cursor: pointer;
+}
+
+
+.register-button {
+  color: #fff;
+  background-color: #46a358;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px 120px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.register-button:hover {
+  background-color: #1A712A;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #3d3d3d;
+  font-size: 14px;
+}
+
+.line-before {
+  width: 100px;
+  height: 1px;
+  background-color: #eaeaea;
+  margin-right: 5px;
+}
+
+.line-after {
+  width: 100px;
+  height: 1px;
+  background-color: #eaeaea;
+  margin-left: 5px;
+}
+
+.register-btn-text {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.register-btn {
+  width: 300px;
+  height: 40px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.btn-google img {
+  margin-right: 15px;
+}
+
+.btn-facebook img {
+  margin-right: 5px;
+}
+
+.bottom-line {
+  width: 500px;
+  height: 10px;
+  background-color: #46a358;
+  margin-top: 25px;
+}
+
+
+
+
+
+
+
+
+
+/* index.html */
+
+
 .wrapper {
   font-size: 16px;
   font-family: "Cera Pro", sans-serif;
@@ -164,6 +335,11 @@ header {
   background: #1A712A;
 }
 
+.login-link {
+  display: flex;
+  gap: 4px;
+}
+
 .btn {
   width: 100px;
   height: 35px;
@@ -258,6 +434,12 @@ h1 span {
   height: 450px;
 }
 
+.rightSideImg {
+  background-image: url(../img/01.png);
+  width: 518px;
+  height: 470px;
+}
+
 .shopWrapper {
   display: flex;
   margin-top: 50px;
@@ -305,6 +487,11 @@ h1 span {
   font-family: "Cera Pro Bold";
 }
 
+.categories-item:hover {
+  color: #46a358;
+  text-decoration: underline;
+}
+
 .ad {
   position: relative;
   background: url(../img/bg1.png);
@@ -330,6 +517,9 @@ h1 span {
   top: 100px;
   left: -30px;
   z-index: 1;
+  background-image: url(../img/flower.png);
+  width: 370px;
+  height: 370px;
 }
 
 .content {
@@ -345,6 +535,12 @@ h1 span {
   max-width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.sort-item:hover {
+  color: #46a358;
+  border-bottom: 2px solid #46A358;
+  font-weight: 700;
 }
 
 .filter {
@@ -557,6 +753,15 @@ h1 span {
   height: 18px;
 }
 
+.pageNotActive:hover {
+  background-color: #46A358;
+  color: #fff;
+}
+
+.page.arrow:hover {
+  background-color: #46A358;
+}
+
 /* ////////////// */
 /* PROMO-CARD */
 /* ////////////// */
@@ -577,11 +782,21 @@ h1 span {
   background: #FBFBFB;
 }
 
-.promoCard>img {
+.promoCardImg {
   width: 292px;
   height: 292px;
   position: absolute;
   top: -50px;
+}
+
+.promoCardLeft {
+  background-image: url(../img/flower5.png);
+  background-repeat: no-repeat;
+}
+
+.promoCardRight {
+  background-image: url(../img/flower3.png);
+  background-repeat: no-repeat;
 }
 
 .plantPromoCentered {
@@ -617,6 +832,7 @@ h1 span {
   margin-top: 30px;
   margin-left: 150px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .plantCardButton>p {
@@ -626,6 +842,10 @@ h1 span {
   font-weight: 500;
   line-height: 20px;
   color: #fff;
+}
+
+.plantCardButton:hover {
+  background-color: #1A712A;
 }
 
 /* ////////////// */
@@ -715,6 +935,12 @@ h1 span {
   line-height: 16px;
   margin-top: 9px;
   cursor: pointer;
+}
+
+
+.blogCardReadMore:hover {
+  text-decoration: underline;
+  color: #1A712A;
 }
 
 /* SERVICES */
@@ -816,6 +1042,7 @@ h1 span {
   font-weight: 700;
   font-family: "Cera Pro Bold";
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .newsLetterDescription p {
@@ -825,6 +1052,10 @@ h1 span {
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
+}
+
+.newsletterButton:hover {
+  background-color: #1A712A;
 }
 
 /* TOPBAR */
@@ -889,6 +1120,12 @@ h1 span {
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
+  cursor: pointer;
+}
+
+.footerInfoListElement:hover {
+  text-decoration: underline;
+  color: #1A712A;
 }
 
 .socialMediaTitle {
@@ -926,4 +1163,9 @@ h1 span {
   line-height: 30px;
   text-align: center;
   margin-bottom: 22px;
+}
+
+.paymentImg {
+  width: 224px;
+  height: 26px;
 }
