@@ -122,18 +122,116 @@
         <aside class="shopAside">
           <div class="asideDescription">
             <h3>Categories</h3>
-            <ul class="categories">
-              <li id="asideActive">House Plants</li>
-              <li class="categories-item">Potter Plants</li>
-              <li class="categories-item">Seeds</li>
-              <li class="categories-item">Small Plants</li>
-              <li class="categories-item">Big Plants</li>
-              <li class="categories-item">Succulents</li>
-              <li class="categories-item">Trerrariums</li>
-              <li class="categories-item">Gardening</li>
-              <li class="categories-item">Accessories</li>
-            </ul>
+
+            <label class="checkboxs" id="asideActive">
+              <input type="checkbox" name="check" checked>
+              House Plants (33)
+              <div class="check-icon"></div>
+            </label>
+
+            <label class="checkboxs">
+              <input type="checkbox" name="check">
+              Potter Plants (12)
+              <div class="check-icon"></div>
+            </label>
+
+            <label class="checkboxs">
+              <input type="checkbox" name="check">
+              Seeds (65)
+              <div class="check-icon"></div>
+            </label>
+
+            <label class="checkboxs">
+              <input type="checkbox" name="check">
+              Small Plants (39)
+              <div class="check-icon"></div>
+            </label>
+
+            <label class="checkboxs">
+              <input type="checkbox" name="check">
+              Big Plants (23)
+              <div class="check-icon"></div>
+            </label>
+
+            <label class="checkboxs">
+              <input type="checkbox" name="check">
+              Succulents (17)
+              <div class="check-icon"></div>
+            </label>
+
+            <label class="checkboxs">
+              <input type="checkbox" name="check">
+              Trerrariums (19)
+              <div class="check-icon"></div>
+            </label>
+
+            <label class="checkboxs">
+              <input type="checkbox" name="check">
+              Gardening (13)
+              <div class="check-icon"></div>
+            </label>
+
+            <label class="checkboxs">
+              <input type="checkbox" name="check">
+              Accessories (18)
+              <div class="check-icon"></div>
+            </label>
+
+            <!-- <div class="price-range-container"> -->
+
+
+
+            <h3 class="price-range">Price Range</h3>
+
+            <div class="range_container">
+              <div class="sliders_control">
+                <input id="fromSlider" type="range" value="39" min="0" max="1319" />
+                <input id="toSlider" type="range" value="1230" min="1" max="1320" />
+              </div>
+              <div class="form_control">
+
+                <div class="form_control_container">
+
+                  <div class="price-container"><span class="price">Price:</span>
+                    $<input class="form_control_container__time__input" type="number" id="fromInput" value="39" min="0"
+                      max="1319" />
+                    -
+                    $<input class="form_control_container__time__input" type="number" id="toInput" value="1230" min="1"
+                      max="1320" />
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <button class="price-range-filter">Filter</button>
+
+            <!-- </div> -->
+            <div class="size-container">
+              <h3 class="size-title">Size</h3>
+              <label class="checkboxs">
+                <input type="checkbox" name="check">
+                Small (119)
+                <div class="check-icon"></div>
+              </label>
+
+              <label class="checkboxs">
+                <input type="checkbox" name="check">
+                Medium (86)
+                <div class="check-icon"></div>
+              </label>
+
+              <label class="checkboxs">
+                <input type="checkbox" name="check">
+                Large (78)
+                <div class="check-icon"></div>
+              </label>
+            </div>
+
           </div>
+
+
           <div class="ad">
             <h3>up to 75% off</h3>
             <div class="adFlower">
@@ -678,6 +776,9 @@
 
     </footer>
   </div>
+
+
+  <script src="./script.js"></script>
 </body>
 
 </html>

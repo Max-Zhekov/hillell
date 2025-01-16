@@ -86,7 +86,7 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
-  animation: hidePreloader 5s forwards;
+  animation: hidePreloader .1s forwards;
 }
 
 @keyframes hidePreloader {
@@ -300,7 +300,7 @@ header {
 
 .navList {
   display: flex;
-  gap: 50px;
+  gap: 45px;
   margin-top: 8px;
 }
 
@@ -547,18 +547,47 @@ h1 span {
   padding-left: 18px;
 }
 
-.asideDescription>ul {
+.checkboxs {
+  color: #3D3D3D;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
   padding-left: 30px;
+  cursor: pointer;
+  line-height: 40px;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Cera Pro Medium";
 }
 
-.asideDescription>ul>li {
-  color: #3D3D3D;
-  font-family: "Cera Pro Medium";
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 40px;
-  cursor: pointer;
+.check-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #50514f;
+  margin-left: 8px;
+}
+
+.check-icon::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #46a358;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.checkboxs input:checked~.check-icon::before {
+  display: block;
+}
+
+.checkboxs input {
+  display: none;
 }
 
 #asideActive {
@@ -569,6 +598,152 @@ h1 span {
 .categories-item:hover {
   color: #46a358;
   text-decoration: underline;
+}
+
+.price-range {
+  color: #3D3D3D;
+  font-family: "Cera Pro Medium";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  margin-top: 36px;
+}
+
+
+.range_container {
+  display: flex;
+  flex-direction: column;
+  width: 217px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.sliders_control {
+  position: relative;
+}
+
+.form_control {
+  position: relative;
+  display: flex;
+  font-size: 24px;
+  color: #46A358;
+  border: transparent;
+}
+
+.price-container {
+  font-family: 'Cera Pro Medium';
+  color: #46A358;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  margin-top: 21px;
+}
+
+.price {
+  color: #3D3D3D;
+  font-weight: 400;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: all;
+  width: 15px;
+  height: 15px;
+  background-color: #46A358;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  pointer-events: all;
+  width: 15px;
+  height: 15px;
+  background-color: #46A358;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="number"] {
+  color: #46A358;
+  width: 33px;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: #C6C6C6;
+  pointer-events: none;
+}
+
+#fromSlider {
+  height: 0;
+  z-index: 1;
+
+}
+
+/* Для Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Для Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.price-range-filter {
+  margin-left: 30px;
+  margin-top: 16px;
+  color: #FFF;
+  font-family: "Cera Pro Bold";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  width: 90px;
+  height: 35px;
+  border-radius: 6px;
+  background: #46A358;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.price-range-filter:hover {
+  background-color: #1A712A;
+}
+
+
+.size-title {
+  color: #3D3D3D;
+  font-family: "Cera Pro Bold";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  margin-top: 36px;
+  margin-left: 18px;
 }
 
 .ad {
