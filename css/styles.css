@@ -548,46 +548,28 @@ h1 span {
 }
 
 .checkboxs {
-  color: #3D3D3D;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  padding-left: 30px;
-  cursor: pointer;
-  line-height: 40px;
   width: 100%;
+  line-height: 40px;
+  cursor: pointer;
   font-size: 15px;
   font-weight: 400;
   font-family: "Cera Pro Medium";
-}
-
-.check-icon {
-  position: relative;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #50514f;
-  margin-left: 8px;
-}
-
-.check-icon::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #46a358;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-}
-
-.checkboxs input:checked~.check-icon::before {
-  display: block;
+  color: #3d3d3d;
+  user-select: text;
+  padding-left: 30px;
 }
 
 .checkboxs input {
   display: none;
+}
+
+.checkboxs input:checked~.item-name,
+.checkboxs input:checked~.item-count {
+  color: #46a358;
 }
 
 #asideActive {
