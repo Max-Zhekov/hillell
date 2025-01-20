@@ -28,6 +28,20 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+
+.wrapper {
+  font-size: 16px;
+  font-family: "Cera Pro", sans-serif;
+  max-width: 1260px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
 .lds-ring,
 .lds-ring div {
   box-sizing: border-box;
@@ -267,35 +281,16 @@
   margin-top: 25px;
 }
 
-
-
-
-
-
-
-
-
-/* index.html */
-
-
-.wrapper {
-  font-size: 16px;
-  font-family: "Cera Pro", sans-serif;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
-
+/* /////////////////// */
+/* HEADER */
+/* /////////////////// */
 header {
   width: 100%;
   height: 53px;
   display: flex;
+  justify-content: space-between;
   margin-top: 30px;
   border-bottom: 1px solid rgba(70, 163, 88, 0.5)
-}
-
-.logo {
-  margin-right: 229px;
 }
 
 .navList {
@@ -382,10 +377,6 @@ header {
   transition: transform 0.3s ease-in-out;
 }
 
-.btnHeader {
-  margin-left: 367px;
-}
-
 .subListItem.hasChild:hover .childItemList {
   display: block;
 }
@@ -446,9 +437,20 @@ header {
   line-height: normal;
 }
 
+.burger {
+  display: none;
+}
 
+.burger-item {
+  width: 35px;
+  height: 5px;
+  background-color: #488d56;
+  margin: 6px 0;
+}
 
-
+/* //////////////// */
+/* HEADER */
+/* //////////////// */
 
 .hero {
   background: linear-gradient(135deg, rgba(245, 245, 245, 0.5) 0%, rgba(245, 245, 245, 0.5) 100%);
@@ -460,7 +462,7 @@ header {
 }
 
 .leftSide {
-  padding: 69px 0 85px 40px;
+  padding: 69px 0 85px 30px;
 }
 
 .subTitle {
@@ -491,6 +493,7 @@ h1 span {
 
 .description {
   color: #727272;
+  max-width: 557px;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -519,10 +522,16 @@ h1 span {
   height: 470px;
 }
 
+/* /////////////// */
+/* PRODUCTS */
+/* /////////////// */
+
 .shopWrapper {
   display: flex;
   margin-top: 50px;
   background-color: #fff;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .shopAside {
@@ -530,6 +539,7 @@ h1 span {
   height: 100%;
   max-height: 1244px;
   background: #f8f8f8;
+  flex-shrink: 0;
 }
 
 .asideDescription {
@@ -567,6 +577,10 @@ h1 span {
   display: none;
 }
 
+.item-count {
+  margin-right: 24px;
+}
+
 .checkboxs input:checked~.item-name,
 .checkboxs input:checked~.item-count {
   color: #46a358;
@@ -592,7 +606,6 @@ h1 span {
   margin-top: 36px;
 }
 
-
 .range_container {
   display: flex;
   flex-direction: column;
@@ -612,6 +625,18 @@ h1 span {
   color: #46A358;
   border: transparent;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 .price-container {
   font-family: 'Cera Pro Medium';
@@ -717,6 +742,16 @@ input[type=number] {
 }
 
 
+
+
+
+
+
+
+
+
+
+
 .size-title {
   color: #3D3D3D;
   font-family: "Cera Pro Bold";
@@ -729,10 +764,13 @@ input[type=number] {
 }
 
 .ad {
-  position: relative;
-  background: url(../img/bg1.png);
-  width: 310px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 280px;
   height: 470px;
+  background: url(../img/SuperSaleBanner.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .ad>h3 {
@@ -745,32 +783,20 @@ input[type=number] {
   font-style: normal;
   font-weight: 700;
   line-height: 16px;
-
 }
 
-.adFlower {
-  position: absolute;
-  top: 100px;
-  left: -30px;
-  z-index: 1;
-  background-image: url(../img/flower.png);
-  width: 370px;
-  height: 370px;
-}
+/* GOODS */
 
 .content {
-  width: 840px;
-  height: 1190px;
-  flex-shrink: 0;
   margin-left: 50px;
-
+  width: calc(100% - 310px);
+  flex: 1;
 }
 
 .contentHeader {
-  width: 840px;
-  max-width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .sort-item:hover {
@@ -812,7 +838,7 @@ input[type=number] {
   justify-content: flex-end;
   width: auto;
   height: 18px;
-  margin-left: auto;
+
 }
 
 #shortBy {
@@ -830,17 +856,18 @@ input[type=number] {
 }
 
 .goods {
-  width: 840px;
+  width: 100%;
   margin-top: 38px;
   margin-bottom: 100px;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 32px;
+  column-gap: 30px;
   row-gap: 70px;
+  justify-content: space-between;
 }
 
 .goodsPhoto {
-  width: 258px;
+  width: 250px;
   height: 300px;
   padding: 31px 4px 19px 4px;
   background-color: #FBFBFB;
@@ -951,457 +978,345 @@ input[type=number] {
   line-height: 16px;
 }
 
-.pagination-container {
-  margin: 50px 0 94px 0;
-  display: flex;
-  gap: 10px;
-  justify-content: flex-end;
-  width: 100%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HEADER */
+@media screen and (max-width: 665px) {
+  .navList {
+    display: none;
+  }
+
+  .btnHeader {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
 }
 
-.pagination {
-  display: flex;
-  align-items: center;
+@media screen and (max-width: 590px) {}
+
+/* HERO */
+@media screen and (max-width: 1120px) {
+  h1 {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
-.page {
-  width: 35px;
-  height: 35px;
-  border: 1px solid #E0E0E0;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  font-weight: 400;
-  color: #000;
-  cursor: pointer;
-  background-color: #fff;
+@media screen and (max-width: 1045px) {
+  h1 {
+    font-size: 55px;
+    line-height: 55px;
+  }
 }
 
-.page.paginationActive {
-  background-color: #46A358;
-  color: #fff;
+@media screen and (max-width: 1010px) {
+  h1 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .rightSideImg {
+    width: 450px;
+    height: 430px;
+  }
 }
 
-.page.arrow img {
-  width: 18px;
-  height: 18px;
+@media screen and (max-width: 920px) {
+  h1 {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
-.pageNotActive:hover {
-  background-color: #46A358;
-  color: #fff;
+@media screen and (max-width: 880px) {
+  h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
-.page.arrow:hover {
-  background-color: #46A358;
+@media screen and (max-width: 840px) {
+  .hero {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .subTitle {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: center;
+    width: 600px;
+  }
+
+  .description {
+    text-align: center;
+    margin: 20px auto 20px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .leftSide {
+    padding: 0;
+  }
 }
 
-/* ////////////// */
-/* PROMO-CARD */
-/* ////////////// */
+@media screen and (max-width: 650px) {
+  h1 {
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 500px;
+  }
 
-.plantPromoSection {
-  display: flex;
-  gap: 28px;
-  justify-content: center;
-  margin-bottom: 140px;
+  .description {
+    width: 475px;
+  }
+
+  .rightSideImg {
+    background-image: url(../img/01-little.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 60px;
+  }
+
 }
 
-.promoCard {
-  width: 586px;
-  height: 250px;
-  display: flex;
+@media screen and (max-width: 560px) {
+  h1 {
+    font-size: 45px;
+    line-height: 45px;
+    width: 450px;
+  }
 
-  position: relative;
-  background: #FBFBFB;
+  .rightSideImg {
+    background-image: url(../img/01-more-little.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 0;
+  }
+
+  .description {
+    width: 420px;
+  }
 }
 
-.promoCardImg {
-  width: 292px;
-  height: 292px;
-  position: absolute;
-  top: -50px;
+@media screen and (max-width: 510px) {
+  h1 {
+    font-size: 40px;
+    line-height: 40px;
+    width: 400px;
+  }
+
+  .description {
+    width: 360px;
+    font-size: 12px;
+  }
+
+  .wrapper {
+    padding: 0 20px;
+  }
 }
 
-.promoCardLeft {
-  background-image: url(../img/flower5.png);
-  background-repeat: no-repeat;
+@media screen and (max-width: 470px) {
+  h1 {
+    font-size: 35px;
+    line-height: 35px;
+    width: 350px;
+  }
+
+  .description {
+    width: 300px;
+    font-size: 12px;
+  }
 }
 
-.promoCardRight {
-  background-image: url(../img/flower3.png);
-  background-repeat: no-repeat;
+@media screen and (max-width: 355px) {
+  .description {
+    max-width: 250px;
+  }
+
+  h1 {
+    max-width: 300px;
+  }
 }
 
-.plantPromoCentered {
-  padding: 37px 30px 46px 264px;
+/* /////////////// */
+/* PRODUCTS */
+/* /////////////// */
+
+@media screen and (max-width: 590px) {
+  .shopWrapper {
+    display: flex;
+    justify-content: center;
+  }
 }
 
-.plantCardTitle {
-  color: #000;
-  text-align: right;
-  font-family: "Cera Pro Bold";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 24px;
-  text-transform: uppercase;
+/* GOODS */
+
+@media (max-width: 1024px) {
+  .shopAside {
+    width: 280px;
+  }
+
+  .content {
+    width: calc(100% - 280px);
+  }
+
 }
 
-.plantCardDescription {
-  color: #3D3D3D;
-  text-align: right;
-  font-family: "Cera Pro Regular";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
+@media (max-width: 992px) {
+  .shopWrapper {
+    flex-wrap: wrap;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .shopAside,
+  .content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .shopAside {
+    margin-bottom: 40px;
+  }
+
+  .price-range {
+    margin-bottom: 10px;
+  }
+
+  .price {
+    padding-left: 30px;
+  }
+
+  .asideDescription {
+    padding: 0 100px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .checkboxs {
+    font-size: 18px;
+  }
+
+  .range_container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    max-width: 100%;
+    position: relative;
+    margin: 20px 0 0 0;
+  }
+
+  .sliders_control {
+    position: absolute;
+    left: 30px;
+    width: 300px;
+    height: 30px;
+  }
 }
 
-.plantCardButton {
-  width: 140px;
-  height: 40px;
-  border-radius: 6px;
-  background: #46A358;
-  margin-top: 30px;
-  margin-left: 150px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+@media (max-width: 768px) {
+  .goods {
+    justify-content: space-evenly;
+    row-gap: 40px;
+  }
+
+  .goodsPhoto {
+    display: flex;
+    justify-content: center;
+    width: 215px;
+  }
+
+  .frame {
+    left: 55px;
+  }
 }
 
-.plantCardButton>p {
-  font-family: "Cera Pro Regular";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  color: #fff;
+@media (max-width: 540px) {
+
+
+  .contentHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sort {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .shortBy {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .goods {
+    margin-top: 20px;
+  }
+
+  .asideDescription {
+    padding: 16px;
+  }
+
+  .sliders_control {
+    width: 250px;
+  }
 }
 
-.plantCardButton:hover {
-  background-color: #1A712A;
-}
+@media (max-width: 390px) {
+  .asideDescription {
+    padding: 0;
+  }
 
-/* ////////////// */
-/* BLOG */
-/* ////////////// */
+  .sliders_control {
+    width: 200px;
+  }
 
-.blogTitle {
-  text-align: center;
-}
-
-.blogName {
-  color: #000;
-  text-align: center;
-  font-family: "Cera Pro Bold";
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 30px;
-  margin-bottom: 15px;
-}
-
-.blogDescription {
-  color: #3D3D3D;
-  text-align: center;
-  font-family: "Cera Pro Regular";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  margin-bottom: 35px;
-}
-
-/* BLOG CARDs */
-
-.blogCards {
-  margin: 0 auto;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 100px;
-}
-
-.blogCard {
-  max-width: 268px;
-  background: #FBFBFB;
-}
-
-.blogCardText {
-  padding: 9px 25px 13px 15px;
-}
-
-.blogSubText {
-  color: #46A358;
-  font-family: "Cera Pro Medium";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px;
-}
-
-.blogCardTitle {
-  margin-top: 4px;
-  color: #000;
-  font-family: "Cera Pro Bold";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 26px;
-}
-
-.blogCardDescription {
-  color: #727272;
-  font-family: "Cera Pro Regular";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-  margin-top: 4px;
-}
-
-.blogCardReadMore {
-  color: #000;
-  font-family: "Cera Pro Medium";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px;
-  margin-top: 9px;
-  cursor: pointer;
-}
-
-
-.blogCardReadMore:hover {
-  text-decoration: underline;
-  color: #1A712A;
-}
-
-/* SERVICES */
-
-.services {
-  width: 100%;
-  background: #FBFBFB;
-  padding: 24px 25px;
-  display: flex;
-}
-
-.servicesPart {
-  width: 734px;
-  display: flex;
-}
-
-.servicesItem {
-  position: relative;
-  width: 204px;
-  height: 204px;
-  margin-right: 61px;
-}
-
-.servicesItem::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 235px;
-  width: 1px;
-  background: rgba(70, 163, 88, 0.10);
-}
-
-.servicesItemName {
-  color: #3D3D3D;
-  font-family: "Cera Pro Medium";
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 700;
-  margin-top: 17px;
-  margin-bottom: 9px;
-}
-
-.servicesItemDescription p {
-  color: #727272;
-  font-family: "Cera Pro Regular";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-}
-
-.newsLetter {
-  margin-left: 62px;
-  width: 354px;
-  height: 202px;
-}
-
-.newsLetterTitle {
-  margin-top: 13px;
-  margin-bottom: 25px;
-  color: #3D3D3D;
-  font-family: "Cera Pro Bold";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 16px;
-}
-
-.newsLetterForm {
-  display: flex;
-  margin-bottom: 18px;
-}
-
-.newsLetterInput {
-  flex: 1;
-  padding: 12px;
-  background-color: #fff;
-  border-radius: 4px 0 0 4px;
-  outline: none;
-}
-
-.newsLetterInput::placeholder {
-  color: #ACACAC;
-  font-family: "Cera Pro Regular";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 16px;
-}
-
-.newsletterButton {
-  padding: 12px 25px;
-  background-color: #46A358;
-  color: #fff;
-  border: none;
-  border-radius: 0 4px 4px 0;
-  font-size: 18px;
-  font-weight: 700;
-  font-family: "Cera Pro Bold";
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.newsLetterDescription p {
-  color: #727272;
-  font-family: "Cera Pro Regular";
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-}
-
-.newsletterButton:hover {
-  background-color: #1A712A;
-}
-
-/* TOPBAR */
-
-.topBar {
-  width: 100%;
-  height: 88px;
-  background: linear-gradient(90deg, #EDF6EF 0%, #52C368 100%);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 23px;
-}
-
-.address {
-  width: 206px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-}
-
-.email {
-  width: 206px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-}
-
-.phoneNumber {
-  width: 206px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-}
-
-/* FOOTER INFO */
-
-.footerInfo {
-  padding: 33px 25px;
-  background: #FBFBFB;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(70, 163, 88, 0.20);
-  margin-bottom: 7px;
-}
-
-.footerInfoListTitle {
-  margin-bottom: 8px;
-  font-family: "Cera Pro Bold";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 18px;
-}
-
-.footerInfoListElement {
-  font-family: "Cera Pro Regular";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  cursor: pointer;
-}
-
-.footerInfoListElement:hover {
-  text-decoration: underline;
-  color: #1A712A;
-}
-
-.socialMediaTitle {
-  font-family: "Cera Pro Bold";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 18px;
-  margin-bottom: 20px;
-}
-
-.socialMediaLinks {
-  display: flex;
-  gap: 10px;
-}
-
-.payment {
-  margin-top: 33px;
-}
-
-.paymentTitle {
-  margin-bottom: 13px;
-  font-family: "Cera Pro Bold";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 18px;
-}
-
-.copyRight p {
-  font-family: "Cera Pro Regular";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  text-align: center;
-  margin-bottom: 22px;
-}
-
-.paymentImg {
-  width: 224px;
-  height: 26px;
+  .ad {
+    background-image: url(../img/SuperSaleBannerSmaller.png);
+  }
 }
