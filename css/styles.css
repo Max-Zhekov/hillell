@@ -741,17 +741,6 @@ input[type=number] {
   background-color: #1A712A;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .size-title {
   color: #3D3D3D;
   font-family: "Cera Pro Bold";
@@ -788,7 +777,7 @@ input[type=number] {
 /* GOODS */
 
 .content {
-  margin-left: 50px;
+  margin-left: 30px;
   width: calc(100% - 310px);
   flex: 1;
 }
@@ -978,12 +967,464 @@ input[type=number] {
   line-height: 16px;
 }
 
+/* PAGINATION */
+
+.pagination-container {
+  margin: 0 0 94px 0;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+.page {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.page.paginationActive {
+  background-color: #46A358;
+  color: #fff;
+}
+
+.page.arrow img {
+  width: 18px;
+  height: 18px;
+}
+
+.pageNotActive:hover {
+  background-color: #46A358;
+  color: #fff;
+}
+
+.page.arrow:hover {
+  background-color: #46A358;
+}
+
+/* PROMO */
+
+.plantPromoSection {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  margin-bottom: 140px;
+  flex-wrap: wrap;
+}
+
+.promoCard {
+  width: 586px;
+  height: auto;
+  display: flex;
+  position: relative;
+  background: #FBFBFB;
+  margin-bottom: 20px;
+}
+
+.promoCardImg {
+  width: 292px;
+  height: 292px;
+  position: absolute;
+  top: -50px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.promoCardLeft {
+  background-image: url(../img/flower5.png);
+  background-repeat: no-repeat;
+}
+
+.promoCardRight {
+  background-image: url(../img/flower3.png);
+  background-repeat: no-repeat;
+}
+
+.plantPromoCentered {
+  padding: 37px 30px 46px 264px;
+}
+
+.plantCardTitle {
+  color: #000;
+  text-align: right;
+  font-family: "Cera Pro Bold";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.plantCardDescription {
+  color: #3D3D3D;
+  text-align: right;
+  font-family: "Cera Pro Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.plantCardButton {
+  width: 140px;
+  height: 40px;
+  border-radius: 6px;
+  background: #46A358;
+  margin-top: 30px;
+  margin-left: 150px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.plantCardButton>p {
+  font-family: "Cera Pro Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: #fff;
+}
+
+.plantCardButton:hover {
+  background-color: #1A712A;
+}
+
+.blogTitle {
+  text-align: center;
+}
+
+.blogName {
+  color: #000;
+  text-align: center;
+  font-family: "Cera Pro Bold";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+.blogDescription {
+  color: #3D3D3D;
+  text-align: center;
+  font-family: "Cera Pro Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 35px;
+}
+
+/* BLOG CARDs */
+
+.blogCards {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+}
+
+.blogCard {
+  max-width: 268px;
+  background: #FBFBFB;
+  margin-bottom: 30px;
+}
+
+.blogCardText {
+  padding: 9px 25px 13px 15px;
+}
+
+.blogSubText {
+  color: #46A358;
+  font-family: "Cera Pro Medium";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.blogCardTitle {
+  margin-top: 4px;
+  color: #000;
+  font-family: "Cera Pro Bold";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.blogCardDescription {
+  color: #727272;
+  font-family: "Cera Pro Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: 4px;
+}
+
+.blogCardReadMore {
+  color: #000;
+  font-family: "Cera Pro Medium";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  margin-top: 9px;
+  cursor: pointer;
+}
 
 
+.blogCardReadMore:hover {
+  text-decoration: underline;
+  color: #1A712A;
+}
 
+/* SERVICES */
 
+.services {
+  width: 100%;
+  background: #FBFBFB;
+  padding: 24px 25px;
+  display: flex;
+}
 
+.servicesPart {
+  width: 734px;
+  display: flex;
+}
 
+.servicesItem {
+  position: relative;
+  width: 204px;
+  height: 204px;
+  margin-right: 61px;
+}
+
+/* .servicesItem::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 235px;
+  width: 1px;
+  background: rgba(70, 163, 88, 0.10);
+} */
+
+.servicesItemName {
+  color: #3D3D3D;
+  font-family: "Cera Pro Medium";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 17px;
+  margin-bottom: 9px;
+}
+
+.servicesItemDescription p {
+  color: #727272;
+  font-family: "Cera Pro Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.newsLetter {
+  max-width: 354px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.newsLetterTitle {
+  margin-top: 13px;
+  margin-bottom: 25px;
+  color: #3D3D3D;
+  font-family: "Cera Pro Bold";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.newsLetterForm {
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.newsLetterInput {
+  flex: 1;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.newsLetterInput::placeholder {
+  color: #ACACAC;
+  font-family: "Cera Pro Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.newsletterButton {
+  padding: 12px 25px;
+  background-color: #46A358;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Cera Pro Bold";
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.newsLetterDescription p {
+  color: #727272;
+  font-family: "Cera Pro Regular";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.newsletterButton:hover {
+  background-color: #1A712A;
+}
+
+/* TOPBAR */
+
+.topBar {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(90deg, #EDF6EF 0%, #52C368 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 23px;
+}
+
+.address {
+  width: 206px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.email {
+  width: 206px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.phoneNumber {
+  width: 206px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+/* FOOTER INFO */
+
+.footerInfo {
+  padding: 33px 25px;
+  background: #FBFBFB;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(70, 163, 88, 0.20);
+  margin-bottom: 7px;
+}
+
+.footerInfoListTitle {
+  margin-bottom: 8px;
+  font-family: "Cera Pro Bold";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.footerInfoListElement {
+  font-family: "Cera Pro Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.footerInfoListElement:hover {
+  text-decoration: underline;
+  color: #1A712A;
+}
+
+.socialMediaTitle {
+  font-family: "Cera Pro Bold";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+
+.socialMediaLinks {
+  display: flex;
+  gap: 10px;
+}
+
+.payment {
+  margin-top: 33px;
+}
+
+.paymentTitle {
+  margin-bottom: 13px;
+  font-family: "Cera Pro Bold";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.copyRight p {
+  font-family: "Cera Pro Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.paymentImg {
+  width: 224px;
+  height: 26px;
+}
 
 
 
@@ -1018,8 +1459,6 @@ input[type=number] {
     display: block;
   }
 }
-
-@media screen and (max-width: 590px) {}
 
 /* HERO */
 @media screen and (max-width: 1120px) {
@@ -1189,7 +1628,17 @@ input[type=number] {
 
 /* GOODS */
 
-@media (max-width: 1024px) {
+@media (max-width: 1234px) {
+  .goodsPhoto {
+    width: 230px;
+    height: 270px;
+  }
+
+  .goodsPhoto>img {
+    width: 230px;
+    height: 230px;
+  }
+
   .shopAside {
     width: 280px;
   }
@@ -1198,6 +1647,9 @@ input[type=number] {
     width: calc(100% - 280px);
   }
 
+  .goods {
+    justify-content: space-evenly;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1256,9 +1708,14 @@ input[type=number] {
   }
 }
 
+@media (max-width: 888px) {
+  .pagination-container {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   .goods {
-    justify-content: space-evenly;
     row-gap: 40px;
   }
 
@@ -1270,6 +1727,46 @@ input[type=number] {
 
   .frame {
     left: 55px;
+  }
+
+  .plantPromoSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promoCard {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    display: block;
+  }
+
+  .promoCardImg {
+    display: none;
+  }
+
+  .plantPromoCentered {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .plantCardTitle {
+    font-size: 22px;
+  }
+
+  .plantCardDescription {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .plantCardTitle,
+  .plantCardDescription {
+    text-align: center;
+  }
+
+  .plantCardButton {
+    margin: 20px auto 0;
+    display: block;
   }
 }
 
@@ -1318,5 +1815,211 @@ input[type=number] {
 
   .ad {
     background-image: url(../img/SuperSaleBannerSmaller.png);
+  }
+}
+
+/* FOOTER */
+
+@media (max-width: 1200px) {
+
+  .services {
+    padding: 24px 15px;
+  }
+
+  .footerInfo {
+    padding: 33px 15px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .services {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+  }
+
+  .servicesPart {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .servicesItem {
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+  }
+
+  .servicesItem::after {
+    display: none;
+  }
+
+  .newsLetter {
+    margin-left: 0;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .topBar {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 15px;
+  }
+
+  .topBarLogo {
+    margin: 0 auto;
+  }
+
+  .address,
+  .email,
+  .phoneNumber {
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+
+  .footerInfo {
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .myAccount,
+  .Help,
+  .socailMediaAndPayment {
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicesPart {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicesItem {
+    width: 100%;
+    max-width: 400px;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .newsLetter {
+    margin-top: 20px;
+    max-width: 400px;
+  }
+
+  .newsLetterForm {
+    flex-direction: column;
+  }
+
+  .newsLetterInput {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .newsletterButton {
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  .topBar {
+    padding: 10px;
+  }
+
+  .address,
+  .email,
+  .phoneNumber {
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
+  .footerInfo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .myAccount,
+  .Help,
+  .socailMediaAndPayment {
+    width: 45%;
+    min-width: 250px;
+  }
+
+  .socailMediaAndPayment {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .payment {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+
+  .topBar {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .topBarLogo {
+    margin: 0 auto;
+  }
+
+  .address,
+  .email,
+  .phoneNumber {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .footerInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .myAccount,
+  .Help,
+  .socailMediaAndPayment {
+    width: 100%;
+    min-width: auto;
+    text-align: center;
+  }
+
+  .myAccount ul,
+  .Help ul {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  .socailMediaAndPayment {
+    align-items: center;
+  }
+
+  .socialMediaLinks {
+    justify-content: center;
+  }
+
+  .copyRight p {
+    text-align: center;
+    margin: 10px;
   }
 }
