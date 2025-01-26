@@ -155,9 +155,6 @@ legend {
 .header {
   padding-top: 50px;
   font-family: $font-family;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 1000;
   margin-bottom: 100px;
@@ -442,11 +439,17 @@ legend {
 
       @include flex(flex-start, stretch, 15px, column, nowrap);
 
-      &--title {
+      &--title a {
         color: #24A3FF;
         font-family: $font-family;
         font-size: 22px;
         font-weight: 700;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+          color: $red-color;
+          text-decoration: underline;
+        }
       }
 
       &--desc {
@@ -916,6 +919,142 @@ legend {
     }
   }
 }
+
+
+.intro {
+  padding: 0 120px 60px 120px;
+
+  &__img {
+    padding: 14px;
+    background-color: $white-color;
+    border-radius: 24px;
+    width: 92px;
+    margin: 0 auto 28px auto;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: $font-family;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: $red-color;
+  }
+
+  &__text {
+    text-align: center;
+    font-family: $font-family;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 60px;
+
+    &--topText {
+      margin: 28px 0;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    font-family: $font-family;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 18px 30px;
+    background: #24A3FF;
+    width: 208px;
+    margin: 28px auto 0 auto;
+    border-radius: 12px;
+  }
+
+  &__line {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.50);
+
+  }
+
+  &__benefits {
+
+    margin-top: 30px;
+
+    &--title {
+      font-family: $font-family;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 30px;
+    }
+
+    &--lists {
+      @include flex(center, flex-start, 60px, row, nowrap);
+    }
+
+    &--leftPart {
+      max-width: 650px;
+
+      &--list {
+        @include flex(center, flex-start, 15px, column, wrap);
+
+        &--item {
+          font-family: $font-family;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 26px;
+
+          &::before {
+            content: ".";
+            color: $red-color;
+          }
+        }
+      }
+    }
+
+    &--rightPart {
+      max-width: 650px;
+
+      &--list {
+        @include flex(center, flex-start, 15px, column, wrap);
+
+        &--item {
+          font-family: $font-family;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 26px;
+
+          &::before {
+            content: ".";
+            color: $red-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// SERVICES ENTRY PAGE
+
+@media (max-width: 1820px) {
+  .intro {
+    padding: 0 0 60px 0;
+  }
+}
+
+@media (max-width: 866px) {
+  .intro__benefits--lists {
+    flex-wrap: wrap;
+  }
+
+  .intro__benefits--leftPart {
+    width: 100%;
+  }
+}
+
 
 @media (max-width: 732px) {
   .footer {
