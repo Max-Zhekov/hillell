@@ -3,6 +3,7 @@
 $font-family: "Montserrat", sans-serif;
 $white-color: #fff;
 $red-color: #F0145A;
+$blue-color: #24A3FF;
 
 @mixin flex($justify-content: flex-start,
   $align-items: stretch,
@@ -166,6 +167,13 @@ legend {
     height: 60px;
   }
 
+  .logo__white {
+    background-image: url(../img/LogoWhite.png);
+    @include flex();
+    width: 130px;
+    height: 60px;
+  }
+
   &__right--mobile {
     display: none;
   }
@@ -182,6 +190,11 @@ legend {
   &__dot {
     margin: 0 6px;
     display: inline-flex;
+  }
+
+  &__dot--white {
+    margin: 0 6px;
+    display: inline-block
   }
 
   &__lang {
@@ -208,6 +221,30 @@ legend {
 
   }
 
+  &__lang.white {
+    a {
+      font-family: $font-family;
+      padding: 5px 7px;
+      background: transparent;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #B3B3BA;
+    }
+
+    a:hover {
+      background: $red-color;
+      border-radius: 8px;
+      color: $white-color;
+    }
+
+    .active {
+      background: $red-color;
+      border-radius: 8px;
+      color: $white-color;
+    }
+  }
+
   &__contacts {
     font-size: 16px;
     font-style: normal;
@@ -227,6 +264,31 @@ legend {
     }
   }
 
+  &__contacts.white {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    @include flex(); //display: flex;
+  }
+
+  .header__contacts--address {
+    color: #B3B3BA;
+  }
+
+  .header__contacts--phoneNumber {
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    cursor: pointer;
+    transition: all .3s ease;
+    color: #B3B3BA;
+
+    &:hover {
+      color: $blue-color;
+    }
+  }
+
+
   &__social {
     display: inline-flex;
     align-items: center;
@@ -237,6 +299,19 @@ legend {
 
     &:hover svg path {
       fill: $red-color;
+    }
+  }
+
+  &__social.white {
+    display: inline-flex;
+    align-items: center;
+
+    & svg path {
+      transition: fill .3s ease;
+    }
+
+    &:hover svg path {
+      fill: $blue-color;
     }
   }
 
@@ -255,7 +330,7 @@ legend {
       display: block;
       width: 100%;
       height: 2px;
-      background: #fff;
+      background: #000;
       margin-bottom: 5px;
     }
 
@@ -292,6 +367,44 @@ legend {
           margin-right: 0;
         }
 
+
+      }
+    }
+
+  }
+
+  &__nav.white {
+
+    margin-top: 16px;
+
+    ul {
+      @include flex(flex-end); // display: flex; justify-content: flex-end;
+
+      li {
+        margin-right: 15px;
+        font-size: 16px;
+        font-weight: 700;
+
+
+        a {
+          border-bottom: 2px solid transparent;
+          transition: .3s all ease;
+          color: $blue-color;
+        }
+
+        a:hover {
+          border-color: $red-color;
+          color: $red-color;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .active {
+          border-color: $red-color;
+          color: $red-color;
+        }
 
       }
     }
@@ -937,7 +1050,6 @@ legend {
   }
 }
 
-
 .intro {
   padding: 0 120px 60px 120px;
 
@@ -983,9 +1095,10 @@ legend {
     line-height: normal;
     padding: 18px 30px;
     background: #24A3FF;
-    width: 208px;
+    width: 211px;
     margin: 28px auto 0 auto;
     border-radius: 12px;
+    box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.50);
   }
 
   &__line {
@@ -1052,6 +1165,148 @@ legend {
         }
       }
     }
+  }
+}
+
+
+.publ {
+  margin: 30px 0;
+  padding: 30px 0;
+
+  &__btn {
+    @include flex(center, center, 0, row, wrap);
+
+    &--container {
+      background: #E6E6F0;
+      border-radius: 12px;
+      padding: 2px;
+      margin-bottom: 30px;
+
+      & button {
+        color: #000;
+        padding: 10px 30px;
+        font-family: $font-family;
+        transition: all .3s ease;
+      }
+
+      .active {
+        background: $white-color;
+        border-radius: 12px;
+      }
+
+      .disActive:hover {
+        background: #F5F5FA;
+        border-radius: 12px;
+      }
+    }
+  }
+
+  &__background {
+    background: #F5F5FA;
+  }
+
+  &__overHead a {
+    color: #24A3FF;
+    font-family: $font-family;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-family: $font-family;
+    color: $red-color;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+
+
+    &--item {
+      @include flex(flex-start, flex-start, 0, column);
+      grid-column: auto;
+      width: 100%;
+
+
+      &--photo {
+        display: block;
+        width: 100%;
+
+        & img {
+          height: 200px;
+          width: 100%;
+        }
+
+      }
+
+      &--text {
+        @include flex(flex-start, flex-start, 15px, column);
+        padding: 30px;
+        background: #fff;
+        flex: 1;
+
+
+        &--title a {
+          color: #24A3FF;
+          font-family: $font-family;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        &--date {
+          color: #B3B3BA;
+          font-family: $font-family;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+
+        &--line {
+          width: 100%;
+          height: 4px;
+          background: #e6e6f0;
+        }
+
+        &--desc {
+          color: #000;
+          font-family: $font-family;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 960px) {
+  .publ__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .publ__cards {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -1179,6 +1434,15 @@ legend {
         justify-content: flex-start;
       }
     }
+
+    &__nav.white {
+
+      margin-top: 0;
+
+      ul {
+        justify-content: flex-start;
+      }
+    }
   }
 
 }
@@ -1198,6 +1462,78 @@ legend {
 
     &__logo {
       background-image: url(../img/LogoMobile.png);
+      width: 69px;
+      height: 32px;
+    }
+
+    &__container {
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      height: auto;
+    }
+
+    &__left {
+      width: 100%;
+
+      @include flex(space-between, center); // display: flex; justify-content: space-between; align-items: center;
+    }
+
+    &__right {
+      @include flex(space-between, center); // display: flex; justify-content: space-between; align-items: center;
+      position: relative;
+      width: 100%;
+      background: rgba(245, 245, 250, 0.20);
+      padding: 6px 12px;
+      display: none;
+    }
+
+
+    &__right--mobile {
+      position: relative;
+      @include flex(space-between, center); // display: flex; justify-content: space-between; align-items: center;
+      width: 100%;
+      background: rgba(245, 245, 250, 0.20);
+      padding: 6px 12px;
+    }
+
+
+    &__burger {
+      display: inline-block;
+    }
+
+    &__dot,
+    &__contacts--address,
+    &__social {
+      display: none;
+    }
+  }
+
+  .hero {
+    min-height: 350px;
+  }
+
+  .header__nav ul>li {
+    display: none;
+  }
+}
+
+// white header
+
+@media (max-width: 630px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  .splash {
+    background-image: url(../img/Symbol600.png);
+    height: 600px;
+  }
+
+  .header {
+    padding-top: 0;
+
+    .logo__white {
+      background-image: url(../img/LogoMobileWhite.png);
       width: 69px;
       height: 32px;
     }
