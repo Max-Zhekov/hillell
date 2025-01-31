@@ -157,7 +157,6 @@ legend {
   font-family: $font-family;
   width: 100%;
   z-index: 1000;
-  margin-bottom: 100px;
 
   &__logo {
     @include flex(); // display: flex;
@@ -219,12 +218,26 @@ legend {
       font-size: 16px;
       font-weight: 700;
       font-style: normal;
+      cursor: pointer;
+      transition: all .3s ease;
+
+      &:hover {
+        color: $red-color;
+      }
     }
   }
 
   &__social {
     display: inline-flex;
     align-items: center;
+
+    & svg path {
+      transition: fill .3s ease;
+    }
+
+    &:hover svg path {
+      fill: $red-color;
+    }
   }
 
   &__burger {
@@ -288,7 +301,7 @@ legend {
 
 .hero {
   position: relative;
-  min-height: 1000px;
+  min-height: 800px;
   @include flex(center, center, 0, column); // display: flex; flex-direction: column; justify-content: center; align-items: center;
   text-align: center;
 
@@ -303,7 +316,7 @@ legend {
 
   .hero__btn {
     position: absolute;
-    bottom: 50px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
@@ -405,6 +418,10 @@ legend {
 
     &:hover {
       color: $red-color;
+    }
+
+    .margin--top {
+      margin-top: 100px;
     }
   }
 
@@ -930,6 +947,7 @@ legend {
     border-radius: 24px;
     width: 92px;
     margin: 0 auto 28px auto;
+    margin-top: 100px;
   }
 
   &__title {
@@ -1096,7 +1114,7 @@ legend {
 
 }
 
-
+// HERO
 
 @media (max-width: 1440px) {
   .wrapper {
@@ -1110,7 +1128,7 @@ legend {
   }
 
   .hero {
-    min-height: 799px;
+    min-height: 600px;
   }
 }
 
@@ -1125,9 +1143,6 @@ legend {
     height: 768px;
   }
 
-  .hero {
-    min-height: 768px;
-  }
 }
 
 @media (max-width: 770px) {
@@ -1166,9 +1181,6 @@ legend {
     }
   }
 
-  .hero {
-    min-height: 1024px;
-  }
 }
 
 @media (max-width: 630px) {
@@ -1233,7 +1245,7 @@ legend {
   }
 
   .hero {
-    min-height: 600px;
+    min-height: 350px;
   }
 
   .header__nav ul>li {

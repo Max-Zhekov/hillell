@@ -133,7 +133,6 @@ legend {
   font-family: "Montserrat", sans-serif;
   width: 100%;
   z-index: 1000;
-  margin-bottom: 100px;
 }
 .header__logo {
   display: flex;
@@ -210,10 +209,21 @@ legend {
   font-size: 16px;
   font-weight: 700;
   font-style: normal;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.header__contacts--phoneNumber:hover {
+  color: #F0145A;
 }
 .header__social {
   display: inline-flex;
   align-items: center;
+}
+.header__social svg path {
+  transition: fill 0.3s ease;
+}
+.header__social:hover svg path {
+  fill: #F0145A;
 }
 .header__burger {
   /* Изначально скрыт (на десктопах не нужен). 
@@ -266,7 +276,7 @@ legend {
 
 .hero {
   position: relative;
-  min-height: 1000px;
+  min-height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -285,7 +295,7 @@ legend {
 }
 .hero .hero__btn {
   position: absolute;
-  bottom: 50px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
@@ -386,6 +396,9 @@ legend {
 }
 .services__overHead a:hover {
   color: #F0145A;
+}
+.services__overHead a .margin--top {
+  margin-top: 100px;
 }
 .services__title {
   color: #F0145A;
@@ -869,6 +882,7 @@ legend {
   border-radius: 24px;
   width: 92px;
   margin: 0 auto 28px auto;
+  margin-top: 100px;
 }
 .intro__title {
   text-align: center;
@@ -1038,7 +1052,7 @@ legend {
     height: 799px;
   }
   .hero {
-    min-height: 799px;
+    min-height: 600px;
   }
 }
 @media (max-width: 1024px) {
@@ -1049,9 +1063,6 @@ legend {
   .splash {
     background-image: url(../img/Symbol768.png);
     height: 768px;
-  }
-  .hero {
-    min-height: 768px;
   }
 }
 @media (max-width: 770px) {
@@ -1078,9 +1089,6 @@ legend {
   }
   .header__nav ul {
     justify-content: flex-start;
-  }
-  .hero {
-    min-height: 1024px;
   }
 }
 @media (max-width: 630px) {
@@ -1145,7 +1153,7 @@ legend {
     display: none;
   }
   .hero {
-    min-height: 600px;
+    min-height: 350px;
   }
   .header__nav ul > li {
     display: none;
