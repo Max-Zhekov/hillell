@@ -936,6 +936,13 @@ legend {
           font-style: normal;
           font-weight: 700;
           line-height: normal;
+          cursor: pointer;
+          transition: all .3s ease;
+
+          &:hover {
+            color: $red-color;
+            text-decoration: underline;
+          }
         }
 
         &--date {
@@ -1002,6 +1009,12 @@ legend {
       line-height: normal;
       letter-spacing: 1px;
       text-transform: uppercase;
+      transition: all .3s ease;
+
+      &:hover {
+        color: $red-color;
+        text-decoration: underline;
+      }
     }
   }
 
@@ -1036,7 +1049,14 @@ legend {
       font-size: 16px;
       font-style: normal;
       font-weight: 700;
-      line-height: normal
+      line-height: normal;
+      transition: all .3s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: $red-color;
+        text-decoration: underline;
+      }
     }
 
     &--email {
@@ -1046,6 +1066,13 @@ legend {
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+      transition: all .3s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: $red-color;
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -1168,7 +1195,6 @@ legend {
   }
 }
 
-
 .publ {
   margin: 30px 0;
   padding: 30px 0;
@@ -1265,6 +1291,13 @@ legend {
           font-style: normal;
           font-weight: 700;
           line-height: normal;
+          cursor: pointer;
+          transition: all .3s ease;
+
+          &:hover {
+            color: $red-color;
+            text-decoration: underline;
+          }
         }
 
         &--date {
@@ -1297,6 +1330,186 @@ legend {
   }
 }
 
+.main {
+  padding: 60px 0;
+  @include flex(center, center, 0, column, nowrap);
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+
+  &__img {
+    background-image: url(../img/image.png);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__title {
+    color: #323264;
+    font-family: $font-family;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 30px;
+  }
+
+  &__data {
+    color: #B3B3BA;
+    font-family: $font-family;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 30px;
+  }
+
+  &__line {
+    height: 4px;
+    background: #E6E6F0;
+    margin-top: 30px;
+  }
+
+  &__text {
+    color: #000;
+    font-family: $font-family;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 30px;
+  }
+
+  &__redText {
+    margin-top: 30px;
+    color: $red-color;
+    font-family: $font-family;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__list {
+    margin-top: 30px;
+
+    &--title {
+      color: #46466e;
+      font-family: $font-family;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    &--ul {
+      margin-top: 15px;
+
+      &--li {
+        color: #000;
+        font-family: $font-family;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+
+        &:first-child::before {
+          content: "1.";
+          color: $red-color;
+          text-align: right;
+          font-family: $font-family;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 26px;
+          margin-right: 10px;
+        }
+
+        &:last-child::before {
+          content: "2.";
+          color: $red-color;
+          text-align: right;
+          font-family: $font-family;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 26px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  &__ad {
+    max-width: 1360px;
+    @include flex(flex-start, center, 15px, column, nowrap);
+
+    &--desc {
+      color: #B3B3BA;
+      text-align: center;
+      font-family: $font-family;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+
+  &__bold {
+    color: #323264;
+    font-family: $font-family;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 30px;
+  }
+
+  &__links {
+    margin-top: 30px;
+    @include flex(flex-start, flex-start, 10px, row, wrap);
+
+    & a {
+      background: #F5F5FA;
+      padding: 9px;
+      display: flex;
+      border-radius: 12px;
+      transition: all .3s ease;
+
+      &:hover {
+        background: #EDEDF7;
+      }
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .main {
+    &__img {
+      background-image: url(../img/image2.png);
+      height: 300px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .main {
+    &__img {
+      background-image: url(../img/image3.png);
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .main {
+    padding-top: 0;
+
+    &__img {
+      background-image: url(../img/image4.png);
+      height: 240px;
+    }
+  }
+}
 
 @media (max-width: 960px) {
   .publ__cards {
