@@ -1573,6 +1573,84 @@ body {
   background: #006CCF;
 }
 
+.team {
+  margin: 60px 0;
+}
+.team .wrapper__team {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  padding: 0 90px;
+}
+.team__title {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #F0145A;
+  font-size: 38px;
+  font-weight: 700;
+  padding: 0 100px;
+}
+.team__cards {
+  padding: 0 30px;
+  margin: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.team__cards--item {
+  max-width: 400px;
+  position: relative;
+  border-radius: 12px;
+}
+.team__cards--item--img img {
+  height: 400px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.team__cards--item--name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.team__cards--item--name a {
+  max-width: 80%;
+  color: #323264;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+.team__cards--item--name a:hover {
+  color: #F0145A;
+}
+.team__cards--item--job {
+  max-width: 361px;
+  font-family: "Montserrat", sans-serif;
+  color: #B3B3BA;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+@media (max-width: 1520px) {
+  .team .wrapper__team {
+    padding: 0;
+  }
+}
+@media (max-width: 800px) {
+  .team__title {
+    font-size: 30px;
+    padding: 0;
+  }
+}
+@media (max-width: 630px) {
+  .team {
+    margin: 0;
+  }
+}
 @media (max-width: 1895px) {
   .contact {
     padding: 0 60px;

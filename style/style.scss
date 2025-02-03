@@ -1675,6 +1675,97 @@ body {
 
 }
 
+.team {
+
+  .wrapper__team {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 90px
+  }
+
+  margin: 60px 0;
+
+  &__title {
+    text-align: center;
+    font-family: $font-family;
+    color: $red-color;
+    font-size: 38px;
+    font-weight: 700;
+    padding: 0 100px;
+  }
+
+  &__cards {
+    padding: 0 30px;
+    margin: 60px 0;
+    @include flex(center, center, 30px, row, wrap);
+
+    &--item {
+      max-width: 400px;
+      position: relative;
+      border-radius: 12px;
+
+      &--img img {
+        height: 400px;
+        border-radius: 12px;
+        margin-bottom: 15px;
+      }
+
+      &--name {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & a {
+          max-width: 80%;
+          color: #323264;
+          font-family: $font-family;
+          font-size: 16px;
+          font-weight: 700;
+          transition: color .3s ease;
+
+          &:hover {
+            color: $red-color;
+          }
+
+        }
+
+      }
+
+      &--job {
+        max-width: 361px;
+        font-family: $font-family;
+        color: #B3B3BA;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+// TEAM
+@media (max-width: 1520px) {
+  .team {
+    .wrapper__team {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .team__title {
+    font-size: 30px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 630px) {
+  .team {
+    margin: 0;
+  }
+}
+
 // CONTACT
 @media (max-width: 1895px) {
   .contact {
