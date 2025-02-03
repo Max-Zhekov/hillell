@@ -131,7 +131,11 @@ legend {
   display: block;
 }
 
-
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
 
 
 .wrapper {
@@ -977,6 +981,8 @@ legend {
 
 .footer {
 
+  padding: 30px;
+
   &__dot {
     margin: 0 10px;
   }
@@ -1483,6 +1489,236 @@ legend {
   }
 }
 
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contact {
+  margin-top: 60px;
+  padding: 0 120px;
+  @include flex(space-between, normal, 30px, row, nowrap);
+
+  &__leftPart {
+
+    max-width: 650px;
+    width: 100%;
+
+    &--address {
+      font-family: $font-family;
+      color: #323264;
+      font-weight: 400;
+      line-height: 30px;
+    }
+
+    &--line {
+      width: 100%;
+      height: 4px;
+      background: #E6E6F0;
+      margin: 30px 0;
+    }
+
+    &--phoneNumber a {
+      color: #46466e;
+      font-family: $font-family;
+      font-weight: 400;
+      line-height: 30px;
+      cursor: pointer;
+      transition: all .3s ease;
+
+      &:hover {
+        color: $red-color;
+        text-decoration: underline;
+      }
+    }
+
+    &--email a {
+      font-family: $font-family;
+      color: #24A3FF;
+      font-weight: 400;
+      line-height: 30px;
+      font-size: 21px;
+      transition: all .3s ease;
+
+      &:hover {
+        color: $red-color;
+        text-decoration: underline;
+      }
+    }
+
+    &--facebook a {
+      @include flex(flex-start, center, 10px, row, nowrap);
+      color: #24A3FF;
+      font-family: $font-family;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all .3s ease;
+
+      &:hover {
+        color: $red-color;
+      }
+
+      &:hover svg path {
+        fill: $red-color;
+      }
+    }
+
+  }
+
+  &__rightPart {
+    background: #F5F5FA;
+    max-width: 650px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+
+    &--title {
+      color: $red-color;
+      font-family: $font-family;
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    &--input {
+      background: #fff;
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      color: #000;
+      font-family: $font-family;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: left;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: #24A3FF;
+        outline: none;
+      }
+    }
+
+    textarea {
+      resize: none;
+      height: 130px;
+      text-align: left;
+      vertical-align: top;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: #24A3FF;
+        outline: none;
+      }
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #B3B3BA;
+      font-family: $font-family;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+    }
+
+    .name {
+      margin-bottom: 15px;
+    }
+
+    .phoneNumber {
+      margin-bottom: 15px;
+    }
+
+    .email {
+      margin-bottom: 30px;
+    }
+
+    &--subtitle {
+      color: #B3B3BA;
+      font-family: $font-family;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 30px 0 15px 0;
+    }
+
+    &--btn {
+      width: 100%;
+      background: #24A3FF;
+      padding: 18px 30px;
+      box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.50);
+      border-radius: 12px;
+      font-family: $font-family;
+      color: $white-color;
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      transition: .3s all ease;
+
+      &:hover {
+        background: #0085FF;
+      }
+
+      &:active {
+        background: #006CCF;
+      }
+    }
+
+  }
+
+}
+
+// CONTACT
+@media (max-width: 1895px) {
+  .contact {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 1766px) {
+  .contact {
+    padding: 0 20px;
+
+    &__rightPart {
+      max-width: 510px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact {
+
+    &__rightPart {
+      max-width: 362px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .contact {
+    @include flex(space-between, normal, 30px, column, nowrap);
+
+    &__rightPart {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .contact {
+    margin-top: 0;
+  }
+}
+
+// PUBL
+
 @media (max-width: 920px) {
   .main {
     &__img {
@@ -1544,6 +1780,9 @@ legend {
 
 @media (max-width: 732px) {
   .footer {
+
+
+
     &__top--info {
       @include flex(center, center, 0, column, wrap);
     }
