@@ -1841,6 +1841,226 @@ body {
 
 }
 
+.aboutUs {
+  &__hero {
+    padding: 60px 120px 0 120px;
+    @include flex(flex-start, flex-start, 0, row, nowrap);
+
+    &--leftPart {
+
+      max-width: 933px;
+
+      &--title {
+        font-family: $font-family;
+        color: $red-color;
+        font-size: 38px;
+        font-weight: 700;
+      }
+
+      &--text {
+        color: #000;
+        font-family: $font-family;
+        font-size: 19px;
+        font-weight: 400;
+        margin-top: 28px;
+        max-width: 942px;
+      }
+    }
+
+    &--rightPart {
+
+      @include flex(flex-start, flex-start, 0, row, nowrap);
+
+      &--line {
+        height: 322px;
+        width: 4px;
+        background: #E6E6F0;
+        margin: 0 30px;
+      }
+
+      &--items {
+
+        @include flex(flex-start, flex-start, 40px, column, wrap);
+
+        &--item {
+          &--top {
+
+            @include flex(flex-start, center, 8px, row, nowrap);
+
+            &--number {
+              font-size: 38px;
+              font-family: $font-family;
+              color: $red-color;
+              font-weight: 700;
+            }
+          }
+
+          &--desc {
+            font-family: $font-family;
+            font-weight: 400;
+            color: #323264;
+            font-size: 16px;
+            max-width: 354px;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.teamPhoto {
+  background: url(../img/Team.jpg) center;
+  width: 100%;
+  height: 584px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include flex(center, center, 0, row, nowrap);
+
+  &__text {
+    font-family: $font-family;
+    text-align: center;
+    text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.80);
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 63px;
+    text-transform: uppercase;
+  }
+}
+
+.more {
+
+  margin-top: 60px;
+  @include flex(flex-start, flex-start, 60px, row, nowrap);
+
+  &__left {
+    color: #000;
+    font-family: $font-family;
+    font-size: 19px;
+    line-height: 30px;
+    font-weight: 400;
+    max-width: 938px;
+  }
+
+  &__right {
+    font-size: 38px;
+    font-weight: 700;
+    font-family: $font-family;
+    color: $red-color;
+  }
+}
+
+.achievements {
+
+  padding: 30px 0;
+
+  &__title {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #323264;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: $font-family;
+    margin-bottom: 30px;
+  }
+
+  &__cards {
+
+    @include flex(center, center, 40px, row, nowrap);
+    margin-bottom: 30px;
+
+    &--item {
+      width: 100%;
+      max-width: 370px;
+      height: 110px;
+      background: $white-color;
+      border-radius: 12px;
+      @include flex(center, center, 0, row, nowrap);
+    }
+  }
+}
+
+// ABOUT US
+@media (max-width: 1300px) {
+
+  .aboutUs {
+    &__hero {
+      padding: 60px 0 0 0;
+    }
+  }
+
+  .teamPhoto {
+    height: 311px;
+    background-size: cover;
+    margin-top: 60px;
+  }
+
+  .more__left {
+    max-width: 505px;
+  }
+}
+
+@media (max-width: 916px) {
+  .aboutUs__hero {
+    flex-wrap: wrap;
+
+    &--rightPart {
+      margin-top: 30px;
+
+      &--line {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .teamPhoto {
+    background-size: contain;
+    height: 231px;
+
+    &__text {
+      font-size: 46px;
+    }
+  }
+
+  .more {
+    flex-wrap: wrap;
+
+    &__right {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+
+  .aboutUs__hero {
+    padding: 0;
+  }
+
+  .teamPhoto {
+    background-size: cover;
+    height: 114px;
+
+    &__text {
+      font-size: 36px;
+    }
+  }
+
+  .achievements__cards--item {
+    display: none;
+
+    &:first-child {
+      display: block;
+      @include flex(center, center, 0, row, nowrap);
+    }
+  }
+
+
+}
+
 // TEAM ENTRY PAGE
 
 @media (max-width: 1550px) {
